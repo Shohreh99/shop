@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Checkout</h2>
+    <form action="{% url 'place_order' %}" method="post">
+        {% csrf_token %}
+
+        <!-- Include form fields for customer details, shipping address, payment method, etc. -->
+
+        <button type="submit">Place Order</button>
+    </form>
+{% endblock %}
